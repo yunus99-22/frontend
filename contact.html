@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact Us</title>
+    <!--Save form data to local storage on form submit-->
+    
+    
+    
+	
+</head>
+<body>
+    
+	<h1>Contact Us</h1>
+	<div id="map"></div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15867.88525276385!2d39.314712329820544!3d-6.134556766655328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185d29d6a654fe25%3A0x3c5a41e8a30b598b!2sDunga!5e0!3m2!1sen!2stz!4v1683198301863!5m2!1sen!2stz" width="600" height="450" style="border:solid 5px blue;" allowfullscreen="" loading="lazy"  referrerpolicy="no-referrer-when-downgrade"></iframe>
+	<form id="contact-form">
+		<label for="name">Name</label>
+		<input type="text" id="name" name="name" required>
+
+		<label for="address">Address</label>
+		<input type="text" id="address" name="address" required>
+
+		<label for="email">Email</label>
+		<input type="email" id="email" name="email" required>
+
+		<label for="comments">Comments</label>
+		<textarea id="comments" name="comments" required></textarea>
+
+		<input type="submit" value="Submit">
+	</form>
+	<script>
+		// Initialize and add the map
+		function initMap() {
+			var location = {lat: 37.7749, lng: -122.4194};
+			var map = new google.maps.Map(
+				document.getElementById('map'), {zoom: 10, center: location});
+			var marker = new google.maps.Marker({position: location, map: map});
+		}
+    var form = document.getElementById("contact-form");
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();
+        var name = document.getElementById("name").value;
+        var address = document.getElementById("address").value;
+        var email = document.getElementById("email").value;
+        var comments = document.getElementById("comments").value;
+        var data = {
+            name: name,
+            address: address,
+            email: email,
+            comments: comments
+        };
+        var contacts = JSON.parse(localStorage.getItem("contacts")) || [];
+        contacts.push(data);
+        localStorage.setItem("contacts", JSON.stringify(contacts));
+        alert("Form data saved to local storage!");
+        form.reset();
+    });
+	</script>
+</body>
+</html>
+<style>
+    h1 {
+        text-align: center;
+    }
+    iframe {
+        border: solid 5px black;
+    }
+    label {
+        color: #141a15;
+    }
+    body {
+        background-image: url('22.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #map {
+        height: 400px;
+        width: 100%;
+    }
+    form {
+        float: left;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    input[type=text], textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #b11414;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+    }
+    input[type=submit] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    input[type=submit]:hover {
+        background-color: #45a049;
+    }
+</style>

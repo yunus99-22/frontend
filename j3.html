@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Navigation Bar Example</title>
+  <style>
+    
+  </style>
+</head>
+<body>
+  <div class="navbar">
+   
+    <ul class="navlist">
+      <li><a href="#">Like</a></li>
+      <li><a href="#">Image</a></li>
+      <li><a href="#">Videos</a></li>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">About Us</a></li>
+    </ul>
+  </div>
+
+  <div class="image-box">
+    <img src="image1.jpg" alt="Image 1">
+    <h3>Image 1</h3>
+    <p>Location: City A</p>
+    <p>Price: $100</p>
+  </div>
+
+  <div class="image-box">
+    <img src="image2.jpg" alt="Image 2">
+    <h3>Image 2</h3>
+    <p>Location: City B</p>
+    <p>Price: $150</p>
+  </div>
+
+  <!-- Rest of your page content -->
+</body>
+</html>
+
+
+<style>
+   .image-box {
+    width: 200px;
+    height: 250px;
+    border: 1px solid #9495f5;
+    margin: 10px;
+    padding: 10px;
+    /* float: left; */
+  }
+  .image-box img {
+    width: 100%;
+    height: 50px;
+    object-fit: cover;
+  }
+  .image-box h3 {
+    margin: 5px 0;
+    font-size: 18px;
+  }
+  .image-box p {
+    margin: 5px 0;
+    font-size: 14px;
+  }
+  body {
+      margin: 0;
+      padding: 0;
+    }
+    
+    .navbar {
+      background-color: #53c058;
+      overflow: hidden;
+      top: 0;
+      width: 100%;
+      text-align: center;
+    }
+    
+    .navbar img {
+      display: block;
+      margin: 0 auto;
+      padding: 10px 0;
+    }
+    
+    .navlist {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #666;
+    }
+    
+    .navlist li {
+      float: left;
+    }
+    
+    .navlist li a {
+      display: block;
+      color: #fff;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    
+    .navlist li a:hover {
+      background-color: #111;
+    }
+</style>

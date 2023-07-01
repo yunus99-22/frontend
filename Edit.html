@@ -1,0 +1,45 @@
+
+
+
+
+//UPDATE
+const form =document.getElementById('frm');
+    form.addEventListener('submit',(e)=>{
+        e.preventDefault();
+
+        let OwnerName =document.getElementById('own');
+        let Adress =document.getElementById('Adress'); 
+        let Gender =document.getElementById('Gender');
+        let Phone =document.getElementById('Phone');
+        let Enmail =document.getElementById('Email');
+        let Hotel_Name =document.getElementById('Hotel_Name');
+        let Country =document.getElementById('Country');
+        let Hotel_Adress=document.getElementById('Hotel_Adress');
+        let Document_Type =document.getElementById('Document_Type');
+        let date =document.getElementById('date');
+
+        const formdata =new FormData(form);
+        const owner =Object.fromEntries(formdata.entries());
+
+
+        fetch(`http://localhost:8080/Hotel/Update/${ownerid}`,{
+            method:'PUT',
+            headers:{
+                'Content-Type':'application/json'
+            },
+            body:JSON.stringify(owner)
+        })
+
+        .then (response=>response.json())
+        .then(data =>{
+            console.log('user created ',data);
+            alert("successfully save");
+        }).catch(error =>{
+            console.error('ERROR ',error)
+        });
+           
+    });
+
+</script>  
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Layout Example</title>
+  <link rel="stylesheet" type="text/css" href="homec.css">
+
+</head>
+<body>
+  <header>
+    <h1 class="mwanzo">SPICES SYSTEM <br> CENTER</h1>
+  </header>
+  <div>
+    <nav>
+    <ul class="navbar">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Contacts</a></li>
+      <li><button>Sign Up</button></li>
+      <li><a href="Log.html"><button>Login</button></a></li>
+      <!-- <li><button>Subscribe</button></li> -->
+      <button id="subscribeBtn">Subscribe</button>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img src="images (5).jpeg" alt="Image">
+      <p>Subscribe now, we will be togather</p>
+      <label for="email">Enter your email </label>
+      <input type="text" name="email" required>
+      <button>submit</button>
+    </div>
+  </div>
+
+    </ul>
+    </nav>
+  </div>
+
+  <!-- <div class="sidebar">
+    <ul>
+      <li><img src="good.jpeg" alt="Icon 1"></li>
+      <li><img src="good.jpeg" alt="Icon 2"></li>
+      <li><img src="good.jpeg" alt="Icon 3"></li>
+    </ul>
+  </div> -->
+
+  <div class="content">
+    <div class="box">
+      <h1>ZAMZAM SPICE FARM</h1>
+      <img src="sky.jpg" alt="Image 1"><img src="good.jpeg" alt=""><br><img src="spice.png" alt=""><img src="kung.jpeg" alt="">
+      <p class="hhh">DUNGA VILLAGE</p>
+      <a href="zamzam.html"><button>More Details</button></a>
+    </div>
+    <div class="box">
+      <h1>TANGAWIZI SPICE FARM</h1>
+      <img src="sky.jpg" alt="Image 2"><img src="sky.jpg" alt="Image 2"><br><img src="sky.jpg" alt="Image 2"><img src="sky.jpg" alt="Image 2">
+      <p>DOLE ZANZIBAR</p>
+      <a href="tangawizi.html"><button>More DetailS</button></a>
+    </div>
+    <div class="box">
+      <h1>VILLAGE GREEN SPICE FARM </h1>
+      <img src="sky.jpg" alt="Image 3"><img src="sky.jpg" alt="Image 2"><img src="sky.jpg" alt="Image 2"><br><img src="sky.jpg" alt="Image 2"><img src="sky.jpg" alt="Image 2">
+      <p>MITAKAWANI VILLAGE</p>
+      <a href="village.html"><button>More Details</button></a>
+    </div>
+    <div class="box">
+      <h1>SISO SPICE FARM</h1>
+      <img src="sky.jpg" alt="Image 4"><img src="sky.jpg" alt="Image 2"><br><img src="sky.jpg" alt="Image 2"><img src="sky.jpg" alt="Image 2">
+      <p>KIDICHI ZANZIBAR</p>
+      <a href="siso.html"><button>More Details</button></a>
+    </div>
+  </div>
+ 
+
+  <footer>
+    <p>Footer content goes here.</p>
+  </footer>
+</body>
+</html>
+
+
+<script>
+  document.getElementById("subscribeBtn").addEventListener("click", function() {
+    var modal = document.getElementById("modal");
+    modal.style.display = "block";
+  
+    var closeButton = document.getElementsByClassName("close")[0];
+    closeButton.addEventListener("click", function() {
+      modal.style.display = "none";
+    });
+  
+    window.addEventListener("click", function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    });
+  });
+</script>
+
+

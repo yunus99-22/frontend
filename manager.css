@@ -1,0 +1,45 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+button {
+    margin-right: 5px;
+}
+#customerTable {
+    background-color: antiquewhite;
+    width: 50%;
+    height: 50px;
+
+}
+tr {
+    background-color: rgb(65, 116, 68);
+    color: white;
+}
+body {
+    background-color: rgb(122, 185, 202);
+    width: 50%;
+    height: 1000px;
+    border: solid 5px white;
+    padding: 5%;
+    margin-left: 350px;
+}
+#customerForm {
+    border: solid 2px green;
+    text-align: center;
+    margin-top: 5%;
+    padding: 10px;
+}
+h1 {
+    text-align: center;
+}

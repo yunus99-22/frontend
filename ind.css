@@ -1,0 +1,30 @@
+body {
+    border: dashed 3px rgb(138, 22, 22);
+    margin-left: 500px;
+    margin-right: 500px;
+    margin-bottom: 400px;
+    color: rgb(23, 107, 6);
+    background-image: image-set("good.jpeg");
+    padding: px;
+    /* background-repeat: no-repeat; */
+    /* background-size: 100%; */
+
+}
+div {
+    background-color: rgb(247, 246, 241);
+    padding: 0px;
+}
+img {
+    width: 100%;
+    padding: 0px;
+}
+h1 {
+    text-align: center;
+}
+h2 {
+    text-align: center;
+}
+#login {
+    text-align: center;
+    padding: 0px;
+}
